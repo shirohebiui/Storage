@@ -5,8 +5,9 @@ https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animat
 */
 
 void Eratos(int *arr, int n) {
-    for(int i=2; i*i<n; i++) {
-        for(int j=i*i; j*i<n; j+=i) {
+    int i, j;
+    for(i=2; i*i<=n; i++) {
+        for(j=i*i; j<=n; j+=i) {
             if(arr[i*j] == 0)   //저장하는 연산을 여러번 하지 않기위해
                 arr[i*j] = 1;
         }
