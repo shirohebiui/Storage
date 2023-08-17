@@ -1,0 +1,22 @@
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <url>
+git push -u origin main
+토큰생성 : https://dev.classmethod.jp/articles/resolving-github-token-authentication-errors/
+
+git config credential.helper store <-정보저장
+git config credential.helper store --global <-모든 프로젝트에 허용
+git config credential.helper cache
+git config credential.helper 'cache --timeout=3600'
+
+
+하위 레포
+git remote -v           상태체크
+git remote rm <name>    제거
+git remote add <remote name> <child git 주소>
+git remote add Baekjoon https://github.com/shirohebiui/BAEKJOON.git
+git subtree add --prefix=<parent 레포지토리에 저장할 폴더명> <child의 remote 이름> <원격 branch name>
+git subtree add --prefix=Baekjoon Baekjoon main
+https://santokki.tistory.com/24

@@ -1,3 +1,9 @@
+void swap(int *a, int *b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
 void quick_sort(int *data, int start, int end) {
 	int left = start;
 	int right = end;

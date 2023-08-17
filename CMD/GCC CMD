@@ -1,0 +1,4 @@
+gcc -o excute code.c
+gcc -o filename filename.cpp -lstdc++
+
+g++ hello.cpp
