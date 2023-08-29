@@ -23,7 +23,7 @@ void quick_sort(int *data, int start, int end) {
 	}
 
 	if(start < right)
-		quick_sort(start, right);
+		quick_sort(data, start, right);
 	if(end > left)
-		quick_sort(left, end);
+		quick_sort(data, left, end);
 }
