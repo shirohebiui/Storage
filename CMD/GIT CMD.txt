@@ -6,6 +6,9 @@ git remote add origin <url>
 git push -u origin main
 토큰생성 : https://dev.classmethod.jp/articles/resolving-github-token-authentication-errors/
 
+이미 레포가 있는 경우
+git pull origin main
+
 git config credential.helper store <-정보저장
 git config credential.helper store --global <-모든 프로젝트에 허용
 git config credential.helper cache
