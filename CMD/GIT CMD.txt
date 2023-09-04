@@ -9,6 +9,9 @@ git push -u origin main
 이미 레포가 있는 경우
 git pull origin main
 
+error: failed to push some refs
+git pull {원격저장소별칭 보통 origin이라고 함} master
+
 git config credential.helper store <-정보저장
 git config credential.helper store --global <-모든 프로젝트에 허용
 git config credential.helper cache
