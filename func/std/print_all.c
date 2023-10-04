@@ -1,17 +1,18 @@
 #define MAX 100
 
-void print_all_1D(int *arr, int width) {
-    for(int w = 0; w < width; w++) {
-        printf("%d ", arr[w]);
+void print_all_1D(int *arr, int size) {
+    // sizeof(arr) ok
+    for(int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
     }
     printf("\n");
 }
 
-void print_all_2D(int (*arr)[MAX], int depth, int width) {
-    for(int d = 0; d < depth; d++) {
-        printf("depth %d : ", d);
-        for(int w = 0; w < width; w++) {
-            printf("%d ", arr[d][w]);
+void print_all_2D(int (*arr)[MAX], int row, int col) {
+    for(int i = 0; i < row; i++) {
+        printf("depth %d : ", i);
+        for(int j = 0; j < col; j++) {
+            printf("%d ", arr[i][j]);
         }
         printf("\n");
     }
