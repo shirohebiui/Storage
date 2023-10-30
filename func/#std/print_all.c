@@ -8,7 +8,7 @@ void print_all_1D(int *arr, int size) {
     printf("\n");
 }
 
-void print_all_2D(int (*arr)[MAX], int row, int col) {
+void print_all_2D(int arr[][MAX], int row, int col) {
     for(int i = 0; i < row; i++) {
         printf("depth %d : ", i);
         for(int j = 0; j < col; j++) {
