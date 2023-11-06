@@ -1,13 +1,14 @@
-void swap(int *a, int *b) {
-    int tmp = *a;
+typedef long type;
+void swap(type *a, type *b) {
+    type tmp = *a;
     *a = *b;
     *b = tmp;
 }
 
-void quick_sort(int *data, int start, int end) {
-	int left = start;
-	int right = end;
-    int pivot = data[ (left + right) / 2 ];
+void quick_sort(type *data, type start, type end) {
+	type left = start;
+	type right = end;
+    type pivot = data[ (left + right) / 2 ];
 	while(left<=right) {
 		while(data[left] < pivot) {
 			left++;
