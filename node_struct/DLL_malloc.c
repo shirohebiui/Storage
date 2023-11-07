@@ -5,7 +5,7 @@
 
 typedef struct _double_node
 {
-	int prio;
+	int key;
 	struct _double_node *prev;
 	struct _double_node *next;
 } double_node;
@@ -30,7 +30,7 @@ double_node *find_double_node(int k)
 	find=head->next;
 	while(find != tail)
 	{
-		if( k == find->prio) return find;
+		if( k == find->key) return find;
 		find = find->next;
 	}
 	return find;
@@ -57,7 +57,7 @@ double_node *insert_double_node(int k, int t) //insert k, before t
 	i = (double_node*)malloc(sizeof(double_node));
 	s = find_double_node(t); //find node key = t
 	
-	i->prio = k;
+	i->key = k;
 	i->prev = s->prev;
 	i->next = s;
 	s->prev->next = i;
@@ -75,7 +75,7 @@ double_node *Insert_double_node_in_order_of_size(int k)
 
 	if(head->next == tail)
 	{
-		i->prio = k;
+		i->key = k;
 		i->prev = head->prev;
 		i->next = tail->next;
 		head->next = i;
@@ -86,13 +86,13 @@ double_node *Insert_double_node_in_order_of_size(int k)
 		s = head->next;
 		while(1)
 		{
-			if(s->prio > k)
+			if(s->key > k)
 				break;
 			s = s->next;
 			if(s==tail)
 				break;
 		}
-		i->prio = k;
+		i->key = k;
 		i->prev = s->prev;
 		i->next = s;
 		s->prev->next = i;
@@ -118,7 +118,7 @@ double_node *insert_double_node_ptr(int k, double_node *t)
 	double_node *i;
 	i = (double_node*)malloc(sizeof(double_node));
 
-	i->prio = k;
+	i->key = k;
 	i->prev = t->prev;
 	i->next = t;
 	t->prev->next = i;
@@ -130,7 +130,7 @@ void print_all(double_node *p)
 	printf("\n");
 	while(p != tail)
 	{
-		printf(" %d     ", p->prio);
+		printf(" %d     ", p->key);
 		p=p->next;
 	}
 }
