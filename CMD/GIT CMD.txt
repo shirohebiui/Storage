@@ -31,3 +31,8 @@ git remote add Baekjoon https://github.com/shirohebiui/BAEKJOON.git
 git subtree add --prefix=<parent 레포지토리에 저장할 폴더명> <child의 remote 이름> <원격 branch name>
 git subtree add --prefix=Baekjoon Baekjoon main
 https://santokki.tistory.com/24
+
+You are not currently on a branch.에러
+git reset –-merge
+
+git checkout <branch>
