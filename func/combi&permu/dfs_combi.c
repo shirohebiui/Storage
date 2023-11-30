@@ -1,7 +1,7 @@
 #define MAX 1000
 int count;
-int select[MAX], data[MAX];
-int n, k;
+int select[MAX], data[MAX]; //= {1,2,3,4};
+int n, r; //nCr n=4 , c=2;
 
 void print() {
     for(int i=0; i<n; i++) {
@@ -11,9 +11,10 @@ void print() {
     }
     printf("\n");
 }
+
 //nCr
 void dfs(int idx, int cnt) {
-    if(cnt == k) {
+    if(cnt == r) {
         count++; //case count
         print(); //case print
         return;
@@ -26,3 +27,5 @@ void dfs(int idx, int cnt) {
         }
     }
 }
+
+//dfs(0,0) 으로실행

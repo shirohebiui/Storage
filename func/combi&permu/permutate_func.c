@@ -20,7 +20,7 @@ void rec(int x) {
 
 //중복허용 X
 int dep[20];
-bool visited[20];
+char visited[20];
 int n;
 
 void rec(int x) {
