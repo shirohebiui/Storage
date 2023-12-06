@@ -9,6 +9,7 @@ typedef unsigned long u64_;
 typedef long long s64;
 typedef unsigned long long u64;
 
-#define abs_(n) (n>0?n:-n)
+#define abs(n) ((n)>0?(n):-(n))
+#define distance(r1, c1, r2, c2) (abs(r1 - r2) + abs(c1 - c2))
 #define max(a,b) (a>b?a:b)
 #define min(a,b) (a<b?a:b)
