@@ -13,10 +13,7 @@ void quick_sort(type *data, type start, type end) {
 	while(left<=right) {
 		while(data[left] < pivot) left++;
 		while(data[right] > pivot) right--;
-		if(left<=right) {
-			swap(&data[left], &data[right]);
-			left++; right--;
-		}
+		if(left<=right) swap(&data[left++], &data[right--]);
 	}
 	quick_sort(data, start, right);
 	quick_sort(data, left, end);
