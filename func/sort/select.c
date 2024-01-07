@@ -9,7 +9,7 @@ void swap(int *a, int *b) {
     *b = tmp;
 }
 
-int main() {
+void selection_sort() {
     int i, j, idx;
     for(i=0; i<MAX-1; i++) {
         idx = i;
@@ -21,6 +21,9 @@ int main() {
         if(idx != i)
             swap(&arr[i], &arr[idx]);
     }
+}
+
+int main() {
 
     for(i=0; i<MAX; i++) {
         printf("%d ", arr[i]);
