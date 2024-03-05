@@ -9,8 +9,7 @@ void swap(int *a, int *b) {
     *b = tmp;
 }
 
-int main()
-{
+void bubble_sort() {
     int i, j;
     for(i=0; i<MAX; i++) {
         for(j=0; j<MAX-i; j++) {
@@ -19,7 +18,12 @@ int main()
             }
         }
     }
-    
+}
+
+int main()
+{
+    bubble_sort();
+    int i, j;
     for(i=0; i<MAX; i++) {
         printf("%d ", arr[i]);
     }

@@ -24,7 +24,7 @@ void selection_sort() {
 }
 
 int main() {
-
+    selection_sort();
     for(i=0; i<MAX; i++) {
         printf("%d ", arr[i]);
     }

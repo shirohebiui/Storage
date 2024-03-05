@@ -6,7 +6,7 @@ void swap(void *s1, void *s2, size_t size) {
     free(tmp);
 }
 
-void sort(ch *arr, int start, int end) {
+void quick_sort(ch *arr, int start, int end) {
     if(start > end) return;
     int left = start;
     int right = end;
@@ -16,6 +16,6 @@ void sort(ch *arr, int start, int end) {
         while(arr[right].frequency > pivot) right--;
         if(left <= right) swap(&arr[left++], &arr[right--], sizeof(arr[0]));
     }
-    sort(arr, start, right);
-    sort(arr, left, end);
+    quick_sort(arr, start, right);
+    quick_sort(arr, left, end);
 }
