@@ -1,5 +1,5 @@
 void init(int n) {
-    for(int i=1; i<=n; i++) {
+    for(int i=1; i<=vsize; i++) {
         parent[i] = i;
     }
 }
@@ -12,6 +12,5 @@ int find(int x) {
 void _union(int a, int b) {
     a = find(a);
     b = find(b);
-    if(a < b) parent[a] = b;
-    else parent[b] = a;
+    a < b ? parent[a] = b : parent[b] = a;
 }
