@@ -15,3 +15,4 @@ typedef unsigned long long u64;
 #define min(a,b) (a<b?a:b)
 
 #define swap(a, b) (a^=b^=a^=b)
+#define swap(a, b) (int t=a; a=b; b=tmp;)
