@@ -26,6 +26,16 @@ struct Trie{
             next[curr]->insert(key+1); //다음 문자 삽입
         }
     }
+    void loopinsert(const char *key) {
+        Trie *now = this;
+        while(*key != '\0') {
+            int cur = *key - '0';
+            if(now->next[cur] == NULL) now->next[cur] = new Trie();
+            now = now->next[cur];
+            key++;
+        }
+        now->end = 1;
+    }
     //트라이에서 문자열 찾기
     Trie *find(const char *key) {
         if(*key == '\0') return this; //문자열 끝나는 위치 반환
@@ -33,4 +43,15 @@ struct Trie{
         if(next[curr] == NULL) return NULL;
         return next[curr]->find(key+1);
     }
-}
+    bool loopfind(const char *key) {
+        Trie *now = this;
+        while(*key != '\0') {
+            int cur = *key - '0';
+            if(now->end == true) return false;
+            if(now->next[cur] != NULL) now = now->next[cur];
+            else return true;
+            key++;
+        }
+        return true;
+    }
+};
