@@ -1,0 +1,18 @@
+
+#define buf_size 1<<20
+#define flush_limit 1<<19
+char buf[buf_size]; int b_ptr;
+
+inline void bwrite(char *p) {
+    while(*p != '\0') buf[b_ptr++] = *p++;
+    buf[b_ptr++] = ' ';
+}
+
+inline void buf_flush() {
+    fwrite(buf, 1, b_ptr, stdout);
+    b_ptr = 0;
+}
+
+bwrite(select_s[i]);
+buf[b_ptr-1] = '\n';
+if(b_ptr >= flush_limit) buf_flush();

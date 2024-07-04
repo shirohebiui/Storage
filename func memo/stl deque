@@ -1,0 +1,5 @@
+#include <deque>
+deque<int> dq;
+
+dq.front() -> 값반환
+dq.pop_front() -> void반환! 값반환X
