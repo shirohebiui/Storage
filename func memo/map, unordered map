@@ -1,0 +1,17 @@
+delay map > unordered_map
+
+map: pair<const Key, T> sorting , binary tree
+
+unordered_map: map not sorting
+
+
+(unordered_)map<string, int> hash;
+hash.insert({key, value});
+for (auto iter = hash.begin() ; iter !=  hash.end(); iter++) {}
+for (auto &iter : hash) {}
+
+hash.erase(hash.begin() + idx);
+hash.erase(hash.begin(), hash.end());
+hash.clear();
+
+hash[key] = value;
