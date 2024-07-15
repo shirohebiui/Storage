@@ -23,8 +23,14 @@ LOGIN
 
 git config credential.helper store <-정보저장
 git config credential.helper store --global <-모든 프로젝트에 허용
+
+git config --global --replace-all user.name "kms"
 git config credential.helper cache
 git config credential.helper 'cache --timeout=7200'
+
+config 초기화
+git config --global --unset credential.helper 
+
 
 하위 레포
 git remote -v           상태체크
