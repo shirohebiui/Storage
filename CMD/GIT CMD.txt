@@ -18,14 +18,13 @@ error: failed to push some refs
 git pull {원격저장소별칭 보통 origin이라고 함} master
 
 LOGIN
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+  git config --global user.email "shirohebiui@gamil.com"
+  git config --global user.name "kms"
 
 git config credential.helper store <-정보저장
 git config credential.helper store --global <-모든 프로젝트에 허용
 git config credential.helper cache
-git config credential.helper 'cache --timeout=3600'
-
+git config credential.helper 'cache --timeout=7200'
 
 하위 레포
 git remote -v           상태체크
