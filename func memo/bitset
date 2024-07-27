@@ -1,0 +1,9 @@
+#include <bitset>
+
+bitset<비트갯수> bit; //bit("10001")등으로 초기화 지정가능
+bit[n번째 비트] //접근방법
+int u32 = bit.to_ulong(); //2->10 진수변경
+bit.all() // all bit 1 -> true, else -> false
+bit.any() // bit 1 cnt >=1 -> true
+bit.none() //  bit 1 cnt >=1 -> false
+bit.count() // bit 1 cnt return
